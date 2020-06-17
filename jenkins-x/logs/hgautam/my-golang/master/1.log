@@ -1,60 +1,136 @@
 
-Showing logs for build [32mhgautam-my-golang-master-2fx4n-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-r82b6[0m
-{"level":"info","ts":1592331806.7072515,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
-{"level":"info","ts":1592331806.7101238,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Showing logs for build [32mhgautam-my-golang-master-l5cd2-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-t62jv[0m
+{"level":"info","ts":1592422448.4931579,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1592422448.4937546,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
 
-Showing logs for build [32mhgautam-my-golang-master-2fx4n-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-v6hjd[0m
-{"level":"info","ts":1592331807.1896996,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
-{"level":"info","ts":1592331807.1942878,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+Showing logs for build [32mhgautam-my-golang-master-l5cd2-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-6wtnq[0m
+{"level":"info","ts":1592422449.3416705,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1592422449.3431919,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
 
-Showing logs for build [32mhgautam-my-golang-master-2fx4n-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+Showing logs for build [32mhgautam-my-golang-master-l5cd2-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
 
-Showing logs for build [32mhgautam-my-golang-master-2fx4n-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-hgautam-my-golang-master-2fx4n-n9mfr[0m
-{"level":"info","ts":1592331818.4749873,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
-{"level":"info","ts":1592331819.2447095,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*******/my-golang.git @ v0.0.1 in path /workspace/source"}
+Showing logs for build [32mhgautam-my-golang-master-l5cd2-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-hgautam-my-golang-master-l5cd2-rg4xb[0m
+{"level":"info","ts":1592422460.6645875,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1592422461.4386265,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*******/my-golang.git @ v0.0.1 in path /workspace/source"}
 
-Showing logs for build [32mhgautam-my-golang-master-2fx4n-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Showing logs for build [32mhgautam-my-golang-master-l5cd2-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
 Using SHAs from PULL_REFS=master:
 WARNING: no SHAs to merge, falling back to initial cloned commit
 
-Showing logs for build [32mhgautam-my-golang-master-2fx4n-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Showing logs for build [32mhgautam-my-golang-master-l5cd2-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
 Generated Git credentials file /workspace/xdg_config/git/credentials
 
-Showing logs for build [32mhgautam-my-golang-master-2fx4n-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-build[0m
+Showing logs for build [32mhgautam-my-golang-master-l5cd2-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-build[0m
 CGO_ENABLED=0 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/my-golang main.go
 
-Showing logs for build [32mhgautam-my-golang-master-2fx4n-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
-E0616 18:23:51.690289       9 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+Showing logs for build [32mhgautam-my-golang-master-l5cd2-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0617 19:34:35.879893      10 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
 	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0000] Resolved base name golang:alpine to build-env 
 [36mINFO[0m[0000] Using dockerignore file: /workspace/source/.dockerignore 
-[36mINFO[0m[0000] No base image, nothing to extract            
-[36mINFO[0m[0000] Built cross stage deps: map[]                
-[36mINFO[0m[0000] No base image, nothing to extract            
-[36mINFO[0m[0000] Executing 0 build triggers                   
-[36mINFO[0m[0000] cmd: EXPOSE                                  
-[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
-[36mINFO[0m[0000] Checking for cached layer gcr.io/integrated-oath-278216/cache:3f9d187bbffc52d1fe61814516373cc991effdc155ed7c89ad125f29c94394b5... 
-[36mINFO[0m[0001] Using caching version of cmd: COPY ./bin/ /  
-[36mINFO[0m[0001] Skipping unpacking as no commands require it. 
-[36mINFO[0m[0001] EXPOSE 8080                                  
-[36mINFO[0m[0001] cmd: EXPOSE                                  
-[36mINFO[0m[0001] Adding exposed port: 8080/tcp                
-[36mINFO[0m[0001] No files changed in this command, skipping snapshotting. 
-[36mINFO[0m[0001] ENTRYPOINT ["/my-golang"]                    
-[36mINFO[0m[0001] No files changed in this command, skipping snapshotting. 
-[36mINFO[0m[0001] COPY ./bin/ /                                
-[36mINFO[0m[0001] Found cached layer, extracting to filesystem 
+[36mINFO[0m[0000] Retrieving image manifest golang:alpine      
+E0617 19:34:36.252522      10 metadata.go:154] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+E0617 19:34:36.255797      10 metadata.go:166] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0002] Retrieving image manifest golang:alpine      
+[36mINFO[0m[0003] Retrieving image manifest alpine             
+[36mINFO[0m[0003] Retrieving image manifest alpine             
+[36mINFO[0m[0004] Built cross stage deps: map[0:[/go/src/my-golang/my-golang]] 
+[36mINFO[0m[0004] Retrieving image manifest golang:alpine      
+[36mINFO[0m[0005] Retrieving image manifest golang:alpine      
+[36mINFO[0m[0007] Executing 0 build triggers                   
+[36mINFO[0m[0007] Checking for cached layer gcr.io/integrated-oath-278216/cache:b58e1a310d29c5111c2b5a249c6fc636f3e842ba5ac3ad04ff5825dd18806ae3... 
+[36mINFO[0m[0007] No cached layer found for cmd COPY . /go/src/my-golang 
+[36mINFO[0m[0007] Unpacking rootfs as cmd COPY . /go/src/my-golang requires it. 
+[36mINFO[0m[0018] WORKDIR /go/src                              
+[36mINFO[0m[0018] cmd: workdir                                 
+[36mINFO[0m[0018] Changed working directory to /go/src         
+[36mINFO[0m[0018] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0018] COPY . /go/src/my-golang                     
+[36mINFO[0m[0019] Resolving 130 paths                          
+[36mINFO[0m[0019] Taking snapshot of files...                  
+[36mINFO[0m[0019] RUN cd /go/src/my-golang && go build .       
+[36mINFO[0m[0019] Taking snapshot of full filesystem...        
+[36mINFO[0m[0019] Pushing layer gcr.io/integrated-oath-278216/cache:b58e1a310d29c5111c2b5a249c6fc636f3e842ba5ac3ad04ff5825dd18806ae3 to cache now 
+[36mINFO[0m[0023] Resolving 11714 paths                        
+[36mINFO[0m[0025] cmd: /bin/sh                                 
+[36mINFO[0m[0025] args: [-c cd /go/src/my-golang && go build .] 
+[36mINFO[0m[0025] Running: [/bin/sh -c cd /go/src/my-golang && go build .] 
+[36mINFO[0m[0026] Taking snapshot of full filesystem...        
+[36mINFO[0m[0026] Resolving 11714 paths                        
+[36mINFO[0m[0029] Pushing layer gcr.io/integrated-oath-278216/cache:91b8d7fb8235d6377ea1c9b06c327ed21f63f4d37eb60ea73a7c2e2f90ff55f1 to cache now 
+[36mINFO[0m[0032] Saving file go/src/my-golang/my-golang for later use 
+[36mINFO[0m[0032] Deleting filesystem...                       
+[36mINFO[0m[0032] Retrieving image manifest alpine             
+[36mINFO[0m[0033] Retrieving image manifest alpine             
+[36mINFO[0m[0034] Executing 0 build triggers                   
+[36mINFO[0m[0034] Checking for cached layer gcr.io/integrated-oath-278216/cache:a28f2a71a4a159437106de4999a1efa4d283c1f79f03d1a24db16b55d78f2849... 
+[36mINFO[0m[0035] No cached layer found for cmd RUN apk update && apk add ca-certificates && rm -rf /var/cache/apk* 
+[36mINFO[0m[0035] cmd: EXPOSE                                  
+[36mINFO[0m[0035] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0035] Unpacking rootfs as cmd RUN apk update && apk add ca-certificates && rm -rf /var/cache/apk* requires it. 
+[36mINFO[0m[0035] RUN apk update && apk add ca-certificates && rm -rf /var/cache/apk* 
+[36mINFO[0m[0035] Taking snapshot of full filesystem...        
+[36mINFO[0m[0035] Resolving 490 paths                          
+[36mINFO[0m[0035] cmd: /bin/sh                                 
+[36mINFO[0m[0035] args: [-c apk update && apk add ca-certificates && rm -rf /var/cache/apk*] 
+[36mINFO[0m[0035] Running: [/bin/sh -c apk update && apk add ca-certificates && rm -rf /var/cache/apk*] 
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.12/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.12/community/x86_64/APKINDEX.tar.gz
+v3.12.0-74-gb8f92cf12a [http://dl-cdn.alpinelinux.org/alpine/v3.12/main]
+v3.12.0-77-ge186c138b6 [http://dl-cdn.alpinelinux.org/alpine/v3.12/community]
+OK: 12734 distinct packages available
+(1/1) Installing ca-certificates (20191127-r3)
+Executing busybox-1.31.1-r16.trigger
+Executing ca-certificates-20191127-r3.trigger
+OK: 6 MiB in 15 packages
+[36mINFO[0m[0036] Taking snapshot of full filesystem...        
+[36mINFO[0m[0036] Resolving 910 paths                          
+[36mINFO[0m[0036] Pushing layer gcr.io/integrated-oath-278216/cache:a28f2a71a4a159437106de4999a1efa4d283c1f79f03d1a24db16b55d78f2849 to cache now 
+[36mINFO[0m[0036] WORKDIR /app                                 
+[36mINFO[0m[0036] cmd: workdir                                 
+[36mINFO[0m[0036] Changed working directory to /app            
+[36mINFO[0m[0036] Creating directory /app                      
+[36mINFO[0m[0036] Resolving 1 paths                            
+[36mINFO[0m[0036] Taking snapshot of files...                  
+[36mINFO[0m[0036] COPY --from=build-env /go/src/my-golang/my-golang /app 
+[36mINFO[0m[0036] Resolving 1 paths                            
+[36mINFO[0m[0036] Taking snapshot of files...                  
+[36mINFO[0m[0037] Pushing layer gcr.io/integrated-oath-278216/cache:320792e6b3483eb64d1a3f43f64854aed8a4032bc172035552b21050df5f47b8 to cache now 
+[36mINFO[0m[0037] EXPOSE 8080                                  
+[36mINFO[0m[0037] cmd: EXPOSE                                  
+[36mINFO[0m[0037] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0037] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0037] ENTRYPOINT [ "./my-golang" ]                 
+[36mINFO[0m[0037] No files changed in this command, skipping snapshotting. 
 
-Showing logs for build [32mhgautam-my-golang-master-2fx4n-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+Showing logs for build [32mhgautam-my-golang-master-l5cd2-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
 no CVE provider running in the current ** namespace so skip adding image to be analysed
 
-Showing logs for build [32mhgautam-my-golang-master-2fx4n-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Showing logs for build [32mhgautam-my-golang-master-l5cd2-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
 Converted /workspace/source/charts/my-golang to an unshallow repository
-Generating change log from git ref f3cb18c3a70ecde51b49dfb20f7b8304e19ed16f => 2ed74b202936578d51928f1b539e860795f4c51b
+Generating change log from git ref f3cb18c3a70ecde51b49dfb20f7b8304e19ed16f => 81c1b4b6239b633a96230ed1a10a997cadc56c60
+Associating user x-0 in users.jenkins.io with email himanshu@aplimasolutions.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit cded97faa841dfc21c4b74a9f99597c8239768f4 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Finding issues in commit messages using git format
+Associating user x-0 in users.jenkins.io with email himanshu@aplimasolutions.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 52c5ef98f9cfbaf89b5c949d36e5bf0ae2849a15 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email himanshu@aplimasolutions.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 52c5ef98f9cfbaf89b5c949d36e5bf0ae2849a15 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email himanshu@aplimasolutions.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit ac94cfdbc5d287e5e19b00ac4ac6858bcc202208 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email himanshu@aplimasolutions.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit ac94cfdbc5d287e5e19b00ac4ac6858bcc202208 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
 Associating user x-0 in users.jenkins.io with email himanshu@aplimasolutions.com to git GitProvider user with login -0 as emails match
 Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
 WARNING: Failed to enrich commit 7c68e18f937c6ad9250b0ddf8481c4caedef0569 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
-Finding issues in commit messages using git format
+Associating user x-0 in users.jenkins.io with email himanshu@aplimasolutions.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 7c68e18f937c6ad9250b0ddf8481c4caedef0569 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
 Associating user x-0 in users.jenkins.io with email himanshu@aplimasolutions.com to git GitProvider user with login -0 as emails match
 Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
 WARNING: Failed to enrich commit 59a19371a05713535366dc507c70027a37bd548f with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
@@ -152,7 +228,7 @@ Created Release my-golang-0-0-1 resource in namespace **
 Updating PipelineActivity *******-my-golang-master-1 with version 0.0.1
 Updated PipelineActivities *******-my-golang-master-1 with release notes URL: https://github.com/*******/my-golang/releases/tag/v0.0.1
 
-Showing logs for build [32mhgautam-my-golang-master-2fx4n-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+Showing logs for build [32mhgautam-my-golang-master-l5cd2-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
 Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
 Successfully added Helm repository storage.googleapis.com.
@@ -162,14 +238,15 @@ WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenk
 Uploading chart file my-golang-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
 Received 201 response: {"saved":true}
 
-Showing logs for build [32mhgautam-my-golang-master-2fx4n-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+Showing logs for build [32mhgautam-my-golang-master-l5cd2-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
 WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
 Promoting app my-golang version 0.0.1 to namespace **-staging
-Created Pull Request: https://github.com/*******/environment-**boot-staging/pull/20
-Added label updatebot to Pull Request https://github.com/*******/environment-**boot-staging/pull/20
-got git provider status pending from PR https://github.com/*******/environment-**boot-staging/pull/20
-got git provider status pending from PR https://github.com/*******/environment-**boot-staging/pull/20
-Pull Request https://github.com/*******/environment-**boot-staging/pull/20 is merged at sha 76fb50ccbd030ba89ba4664e02fefd4c7827416c
+Created Pull Request: https://github.com/*******/environment-**boot-staging/pull/21
+Added label updatebot to Pull Request https://github.com/*******/environment-**boot-staging/pull/21
+got git provider status pending from PR https://github.com/*******/environment-**boot-staging/pull/21
+got git provider status pending from PR https://github.com/*******/environment-**boot-staging/pull/21
+got git provider status pending from PR https://github.com/*******/environment-**boot-staging/pull/21
+Pull Request https://github.com/*******/environment-**boot-staging/pull/21 is merged at sha b095318c08df2aef5ca40a704bb771b25f7619be
 Pull Request merged but we are not waiting for the update pipeline to complete!
 WARNING: Could not find the service URL in namespace **-staging for names my-golang, **-my-golang, **-staging-my-golang
