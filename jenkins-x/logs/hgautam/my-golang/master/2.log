@@ -1,134 +1,123 @@
 
-Showing logs for build [32mhgautam-my-golang-master-releas-9xgqt-2[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-m4lqn[0m
-{"level":"info","ts":1592527216.93144,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
-{"level":"info","ts":1592527216.932925,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Showing logs for build [32mhgautam-my-golang-master-22rvl-2[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1596672595.5334349,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
 
-Showing logs for build [32mhgautam-my-golang-master-releas-9xgqt-2[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-d5gfs[0m
-{"level":"info","ts":1592527217.9043832,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
-{"level":"info","ts":1592527217.9073365,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+Showing logs for build [32mhgautam-my-golang-master-22rvl-2[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
 
-Showing logs for build [32mhgautam-my-golang-master-releas-9xgqt-2[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+Showing logs for build [32mhgautam-my-golang-master-22rvl-2[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
 
-Showing logs for build [32mhgautam-my-golang-master-releas-9xgqt-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-hgautam-my-golang-master-releas-9xgqt-rsgbv[0m
-{"level":"info","ts":1592527228.0397863,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
-{"level":"info","ts":1592527228.670602,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*******/my-golang.git @ v0.0.2 in path /workspace/source"}
+Showing logs for build [32mhgautam-my-golang-master-22rvl-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-hgautam-my-golang-master-22rvl-fxvdv[0m
+{"level":"info","ts":1596672629.827208,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/*******/my-golang.git @ v0.0.4 in path /workspace/source"}
+{"level":"warn","ts":1596672629.827321,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1596672629.8724158,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
 
-Showing logs for build [32mhgautam-my-golang-master-releas-9xgqt-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
-Using SHAs from PULL_REFS=master:d51d468f12a27e8abd78204dcf1a58182dde3268
+Showing logs for build [32mhgautam-my-golang-master-22rvl-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mhgautam-my-golang-master-22rvl-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
 WARNING: no SHAs to merge, falling back to initial cloned commit
 
-Showing logs for build [32mhgautam-my-golang-master-releas-9xgqt-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Showing logs for build [32mhgautam-my-golang-master-22rvl-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
 Generated Git credentials file /workspace/xdg_config/git/credentials
 
-Showing logs for build [32mhgautam-my-golang-master-releas-9xgqt-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-build[0m
+Showing logs for build [32mhgautam-my-golang-master-22rvl-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-build[0m
 CGO_ENABLED=0 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/my-golang main.go
 
-Showing logs for build [32mhgautam-my-golang-master-releas-9xgqt-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
-E0619 00:40:42.684835       9 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+Showing logs for build [32mhgautam-my-golang-master-22rvl-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0806 00:10:44.271115      10 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
 	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
-[36mINFO[0m[0001] Resolved base name golang:alpine to build-env 
-[36mINFO[0m[0001] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0000] Resolved base name golang:alpine to build-env 
+[36mINFO[0m[0000] Using dockerignore file: /workspace/source/.dockerignore 
 [36mINFO[0m[0001] Retrieving image manifest golang:alpine      
-E0619 00:40:42.983074       9 metadata.go:154] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
-E0619 00:40:42.985852       9 metadata.go:166] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+E0806 00:10:44.686859      10 metadata.go:154] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+E0806 00:10:44.690542      10 metadata.go:166] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
 [36mINFO[0m[0002] Retrieving image manifest golang:alpine      
-[36mINFO[0m[0003] Retrieving image manifest alpine             
 [36mINFO[0m[0004] Retrieving image manifest alpine             
-[36mINFO[0m[0004] Built cross stage deps: map[0:[/go/src/my-golang/my-golang /go/src/my-golang/assets]] 
-[36mINFO[0m[0004] Retrieving image manifest golang:alpine      
-[36mINFO[0m[0005] Retrieving image manifest golang:alpine      
-[36mINFO[0m[0006] Executing 0 build triggers                   
-[36mINFO[0m[0006] Checking for cached layer gcr.io/integrated-oath-278216/cache:252d72edf13e420b55adab9120b031e42a2f80e5adb86bb2cc53724e4a1a20e4... 
-[36mINFO[0m[0006] No cached layer found for cmd COPY . /go/src/my-golang 
-[36mINFO[0m[0006] Unpacking rootfs as cmd COPY . /go/src/my-golang requires it. 
-[36mINFO[0m[0015] WORKDIR /go/src                              
-[36mINFO[0m[0015] cmd: workdir                                 
-[36mINFO[0m[0015] Changed working directory to /go/src         
-[36mINFO[0m[0015] No files changed in this command, skipping snapshotting. 
-[36mINFO[0m[0015] COPY . /go/src/my-golang                     
-[36mINFO[0m[0015] Resolving 129 paths                          
-[36mINFO[0m[0015] Taking snapshot of files...                  
-[36mINFO[0m[0015] Pushing layer gcr.io/integrated-oath-278216/cache:252d72edf13e420b55adab9120b031e42a2f80e5adb86bb2cc53724e4a1a20e4 to cache now 
-[36mINFO[0m[0015] RUN cd /go/src/my-golang && go build .       
-[36mINFO[0m[0015] Taking snapshot of full filesystem...        
-[36mINFO[0m[0019] Resolving 11713 paths                        
-[36mINFO[0m[0021] cmd: /bin/sh                                 
-[36mINFO[0m[0021] args: [-c cd /go/src/my-golang && go build .] 
-[36mINFO[0m[0021] Running: [/bin/sh -c cd /go/src/my-golang && go build .] 
-[36mINFO[0m[0022] Taking snapshot of full filesystem...        
-[36mINFO[0m[0022] Resolving 11713 paths                        
-[36mINFO[0m[0024] Pushing layer gcr.io/integrated-oath-278216/cache:4152a1ece9c07cd385578d228855e33d2db9f43b070fab1c9b85b4d78941ddc0 to cache now 
-[36mINFO[0m[0027] Saving file go/src/my-golang/my-golang for later use 
-[36mINFO[0m[0027] Saving file go/src/my-golang/assets for later use 
-[36mINFO[0m[0027] Deleting filesystem...                       
-[36mINFO[0m[0027] Retrieving image manifest alpine             
-[36mINFO[0m[0028] Retrieving image manifest alpine             
-[36mINFO[0m[0029] Executing 0 build triggers                   
-[36mINFO[0m[0029] Checking for cached layer gcr.io/integrated-oath-278216/cache:a28f2a71a4a159437106de4999a1efa4d283c1f79f03d1a24db16b55d78f2849... 
-[36mINFO[0m[0029] Using caching version of cmd: RUN apk update && apk add ca-certificates && rm -rf /var/cache/apk* 
-[36mINFO[0m[0029] Checking for cached layer gcr.io/integrated-oath-278216/cache:9d19d88e5b54226d959af3ba44463d6668702ce68a4f653c558a4f9da20689b9... 
-[36mINFO[0m[0030] No cached layer found for cmd COPY --from=build-env /go/src/my-golang/my-golang /app 
-[36mINFO[0m[0030] cmd: EXPOSE                                  
-[36mINFO[0m[0030] Adding exposed port: 8080/tcp                
-[36mINFO[0m[0030] Unpacking rootfs as cmd COPY --from=build-env /go/src/my-golang/my-golang /app requires it. 
-[36mINFO[0m[0030] RUN apk update && apk add ca-certificates && rm -rf /var/cache/apk* 
-[36mINFO[0m[0030] Found cached layer, extracting to filesystem 
-[36mINFO[0m[0030] WORKDIR /app                                 
-[36mINFO[0m[0030] cmd: workdir                                 
-[36mINFO[0m[0030] Changed working directory to /app            
-[36mINFO[0m[0030] Creating directory /app                      
-[36mINFO[0m[0030] Resolving 1 paths                            
-[36mINFO[0m[0030] Taking snapshot of files...                  
-[36mINFO[0m[0030] COPY --from=build-env /go/src/my-golang/my-golang /app 
-[36mINFO[0m[0030] Resolving 1 paths                            
-[36mINFO[0m[0030] Taking snapshot of files...                  
-[36mINFO[0m[0030] COPY --from=build-env /go/src/my-golang/assets /app/assets 
-[36mINFO[0m[0030] Resolving 2 paths                            
-[36mINFO[0m[0030] Taking snapshot of files...                  
-[36mINFO[0m[0030] Pushing layer gcr.io/integrated-oath-278216/cache:f18851971cc6efd78ef12e77615149b9e2b581c1afecdd3a323fcbdb7db9f505 to cache now 
-[36mINFO[0m[0031] EXPOSE 8080                                  
-[36mINFO[0m[0031] cmd: EXPOSE                                  
-[36mINFO[0m[0031] Adding exposed port: 8080/tcp                
-[36mINFO[0m[0031] No files changed in this command, skipping snapshotting. 
-[36mINFO[0m[0031] ENTRYPOINT [ "./my-golang" ]                 
-[36mINFO[0m[0031] No files changed in this command, skipping snapshotting. 
-[36mINFO[0m[0031] Pushing layer gcr.io/integrated-oath-278216/cache:9d19d88e5b54226d959af3ba44463d6668702ce68a4f653c558a4f9da20689b9 to cache now 
+[36mINFO[0m[0005] Retrieving image manifest alpine             
+[36mINFO[0m[0006] Built cross stage deps: map[0:[/go/src/my-golang/my-golang]] 
+[36mINFO[0m[0006] Retrieving image manifest golang:alpine      
+[36mINFO[0m[0007] Retrieving image manifest golang:alpine      
+[36mINFO[0m[0008] Executing 0 build triggers                   
+[36mINFO[0m[0008] Checking for cached layer gcr.io/integrated-oath-278216/cache:daf4193926cbb93c3b2ff447f5ab20906d6f506ec98addb54c8620fe25d2666b... 
+[36mINFO[0m[0008] No cached layer found for cmd COPY . /go/src/my-golang 
+[36mINFO[0m[0008] Unpacking rootfs as cmd COPY . /go/src/my-golang requires it. 
+[36mINFO[0m[0017] WORKDIR /go/src                              
+[36mINFO[0m[0017] cmd: workdir                                 
+[36mINFO[0m[0017] Changed working directory to /go/src         
+[36mINFO[0m[0017] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0017] COPY . /go/src/my-golang                     
+[36mINFO[0m[0017] Resolving 131 paths                          
+[36mINFO[0m[0017] Taking snapshot of files...                  
+[36mINFO[0m[0018] RUN cd /go/src/my-golang && go build .       
+[36mINFO[0m[0018] Taking snapshot of full filesystem...        
+[36mINFO[0m[0018] Pushing layer gcr.io/integrated-oath-278216/cache:daf4193926cbb93c3b2ff447f5ab20906d6f506ec98addb54c8620fe25d2666b to cache now 
+[36mINFO[0m[0020] Resolving 11725 paths                        
+[36mINFO[0m[0023] cmd: /bin/sh                                 
+[36mINFO[0m[0023] args: [-c cd /go/src/my-golang && go build .] 
+[36mINFO[0m[0023] Running: [/bin/sh -c cd /go/src/my-golang && go build .] 
+[36mINFO[0m[0024] Taking snapshot of full filesystem...        
+[36mINFO[0m[0024] Resolving 11725 paths                        
+[36mINFO[0m[0026] Pushing layer gcr.io/integrated-oath-278216/cache:a6911d6e49d445504079e1f19e1afefeba21014ebfd6fc73e3b3e519a7162adf to cache now 
+[36mINFO[0m[0029] Saving file go/src/my-golang/my-golang for later use 
+[36mINFO[0m[0029] Deleting filesystem...                       
+[36mINFO[0m[0029] Retrieving image manifest alpine             
+[36mINFO[0m[0030] Retrieving image manifest alpine             
+[36mINFO[0m[0032] Executing 0 build triggers                   
+[36mINFO[0m[0032] Checking for cached layer gcr.io/integrated-oath-278216/cache:a28f2a71a4a159437106de4999a1efa4d283c1f79f03d1a24db16b55d78f2849... 
+[36mINFO[0m[0032] Using caching version of cmd: RUN apk update && apk add ca-certificates && rm -rf /var/cache/apk* 
+[36mINFO[0m[0032] Checking for cached layer gcr.io/integrated-oath-278216/cache:95a0c1c47eca6499d76a5edf17777fd9aada5277442933488a04caf361e818a3... 
+[36mINFO[0m[0032] No cached layer found for cmd COPY --from=build-env /go/src/my-golang/my-golang /app 
+[36mINFO[0m[0032] cmd: EXPOSE                                  
+[36mINFO[0m[0032] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0032] Unpacking rootfs as cmd COPY --from=build-env /go/src/my-golang/my-golang /app requires it. 
+[36mINFO[0m[0033] RUN apk update && apk add ca-certificates && rm -rf /var/cache/apk* 
+[36mINFO[0m[0033] Found cached layer, extracting to filesystem 
+[36mINFO[0m[0033] WORKDIR /app                                 
+[36mINFO[0m[0033] cmd: workdir                                 
+[36mINFO[0m[0033] Changed working directory to /app            
+[36mINFO[0m[0033] Creating directory /app                      
+[36mINFO[0m[0033] Resolving 1 paths                            
+[36mINFO[0m[0033] Taking snapshot of files...                  
+[36mINFO[0m[0033] COPY --from=build-env /go/src/my-golang/my-golang /app 
+[36mINFO[0m[0033] Resolving 1 paths                            
+[36mINFO[0m[0033] Taking snapshot of files...                  
+[36mINFO[0m[0034] Pushing layer gcr.io/integrated-oath-278216/cache:95a0c1c47eca6499d76a5edf17777fd9aada5277442933488a04caf361e818a3 to cache now 
+[36mINFO[0m[0034] EXPOSE 8080                                  
+[36mINFO[0m[0034] cmd: EXPOSE                                  
+[36mINFO[0m[0034] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0034] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0034] ENTRYPOINT [ "./my-golang" ]                 
+[36mINFO[0m[0034] No files changed in this command, skipping snapshotting. 
 
-Showing logs for build [32mhgautam-my-golang-master-releas-9xgqt-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+Showing logs for build [32mhgautam-my-golang-master-22rvl-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
 no CVE provider running in the current ** namespace so skip adding image to be analysed
 
-Showing logs for build [32mhgautam-my-golang-master-releas-9xgqt-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Showing logs for build [32mhgautam-my-golang-master-22rvl-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
 Converted /workspace/source/charts/my-golang to an unshallow repository
-Generating change log from git ref d759574632235a0f35a22eab9d712a4e7cdefb40 => 32f7811c88188600b6782e8efef2f4da4d55cc82
-WARNING: Failed to enrich commit 023013747a51b583a58a1b06fdd6ac834501eee7 with issues: selected more than one user from users.jenkins.io: [******* x-0]
-WARNING: Failed to enrich commit 023013747a51b583a58a1b06fdd6ac834501eee7 with issues: selected more than one user from users.jenkins.io: [******* x-0]
-Finding issues in commit messages using git format
-WARNING: Failed to find closedBy user for issue 12 repository https://github.com/*******/my-golang
-WARNING: No release found for *******/my-golang and tag v0.0.2 so creating a new release
-Updated the release information at https://github.com/*******/my-golang/releases/tag/v0.0.2
+Generating change log from git ref d0e4a2713452ee562f0419150705ec84bc3b012b => 018a09253d309c28a644175ef482bac97d169332
+WARNING: No release found for *******/my-golang and tag v0.0.4 so creating a new release
+Updated the release information at https://github.com/*******/my-golang/releases/tag/v0.0.4
 generated: /workspace/source/charts/my-golang/templates/release.yaml
-Created Release my-golang-0-0-2 resource in namespace **
-Updating PipelineActivity *******-my-golang-master-2 with version 0.0.2
-Updated PipelineActivities *******-my-golang-master-2 with release notes URL: https://github.com/*******/my-golang/releases/tag/v0.0.2
+Created Release my-golang-0-0-4 resource in namespace **
+Updating PipelineActivity *******-my-golang-master-2 with version 0.0.4
+Updated PipelineActivities *******-my-golang-master-2 with release notes URL: https://github.com/*******/my-golang/releases/tag/v0.0.4
 
-Showing logs for build [32mhgautam-my-golang-master-releas-9xgqt-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+Showing logs for build [32mhgautam-my-golang-master-22rvl-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
 Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
 Successfully added Helm repository storage.googleapis.com.
 Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
 Successfully added Helm repository jenkins-x-chartmuseum.
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
-Uploading chart file my-golang-0.0.2.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Uploading chart file my-golang-0.0.4.tgz to http://jenkins-x-chartmuseum:8080/api/charts
 Received 201 response: {"saved":true}
 
-Showing logs for build [32mhgautam-my-golang-master-releas-9xgqt-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+Showing logs for build [32mhgautam-my-golang-master-22rvl-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
 WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
-Promoting app my-golang version 0.0.2 to namespace **-staging
-Created Pull Request: https://github.com/*******/environment-**boot-staging/pull/25
-Added label updatebot to Pull Request https://github.com/*******/environment-**boot-staging/pull/25
-got git provider status pending from PR https://github.com/*******/environment-**boot-staging/pull/25
-got git provider status pending from PR https://github.com/*******/environment-**boot-staging/pull/25
-got git provider status pending from PR https://github.com/*******/environment-**boot-staging/pull/25
-Pull Request https://github.com/*******/environment-**boot-staging/pull/25 is merged at sha 716057d5866bb4294b34902d69f6b2fd9afafe51
-Pull Request merged but we are not waiting for the update pipeline to complete!
+Promoting app my-golang version 0.0.4 to namespace **-staging
+Created Pull Request: https://github.com/*******/environment-**boot-staging/pull/42
+Added label updatebot to Pull Request https://github.com/*******/environment-**boot-staging/pull/42
+got git provider status pending from PR https://github.com/*******/environment-**boot-staging/pull/42
+got git provider status pending from PR https://github.com/*******/environment-**boot-staging/pull/42
+got git provider status pending from PR https://github.com/*******/environment-**boot-staging/pull/42
