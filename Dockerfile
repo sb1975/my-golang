@@ -1,4 +1,4 @@
-FROM golang:alpine AS build-env
+FROM golang:1.14-alpine AS build
 WORKDIR /go/src
 COPY . /go/src/my-golang
 RUN cd /go/src/my-golang && go build .
