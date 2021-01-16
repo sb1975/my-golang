@@ -16,11 +16,14 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	if from != "/favicon.ico" {
 		log.Printf("title: %s\n", title)
 	}
-       
-    fmt.Fprintf(w, "Hello from:  "+title+"\n")          
+	fmt.Fprintf(w, "<h1>Hello from: "+title+" </h1>")
+	fmt.Fprintf(w, "<img src='assets/jxlogo.png' alt='jxlogo'
+	style='width:500;height:180;'>")
 }
 
 func main() {
 	http.HandleFunc("/", handler)
+	http.Handle("/assets/", http.StripPrefix("/assets/",
+	http.FileServer(http.Dir("./assets"))))
 	http.ListenAndServe(":8080", nil)
 }
